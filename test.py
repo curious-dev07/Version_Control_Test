@@ -142,3 +142,97 @@ def remove_null_list(lst):
     return lst
 print(remove_null_list(["abhay", "krishna", ["poonam", "kavya", [], ], ["ashvini", "saumya", "kartik", [], [[], "amit"]]]))
 """
+
+# string = "qpowertyuiolaksjhdfgzbvx"
+# # print(string[::-1])
+# print(string[-2:1:-2])
+"""
+def string_reverse(str):
+    li = []
+    for i in range(len(str)-1, -1, -1):
+        print(str[i])
+        li.append(str[i])
+    return "".join(li)
+print(string_reverse("Ramesh"))
+"""
+"""
+name = "RAHUL"
+def string_reverse(str):
+    li = []
+    for i in range(len(str)-1, -1, -1):
+        li.append(str[i])
+    return "".join(li)
+print(string_reverse(name))
+"""
+"""
+sentence = "I am very Happy that I got this oppurtunity to work on this project"
+
+def reverse_word_inSentence(str):
+    return " ".join((str.split(" "))[::-1])
+print(reverse_word_inSentence(sentence))
+"""
+"""
+def find_pair_indexs(lst, target):
+    n = len(lst)
+    for i in range(n):
+        for j in range(i+1, n):
+            if lst[i] + lst[j] == target:
+                return (i, j)
+    return "Pair does not Exist."
+
+li = [100, 200, 1000, 1200, 500, 200]
+print(find_pair_indexs(li, 1400))
+"""
+"""
+my_string = "Hello World"
+vowels = "aeiouAEIOU"
+vowel_list = []
+
+for char in my_string:
+    if char in vowels:
+        vowel_list.append(char)
+        
+print(vowel_list)
+"""
+"""
+my_list = [1, 2, 3, 4, 5]
+index1 = 1
+index2 = 3
+
+my_list[index1], my_list[index2] = my_list[index2], my_list[index1]
+
+print(my_list)
+
+"""
+"""
+num = int(input('no='))
+temp = num
+sum = 0
+
+while temp > 0:
+    digit = temp % 10
+    sum = sum + (digit**3)
+    temp = temp // 10
+
+if num == sum:
+    print('yes')
+
+else:
+    print('no')
+"""
+#check for amstrong Number.
+num = int(input("No : "))   
+temp = num
+sum = 0
+while temp > 0:
+    digit = temp % 10
+    sum = sum + (digit **3)
+    temp = temp // 10
+    
+if num == sum:
+    print("yes")
+
+else:
+    print("NO")
+        
+
