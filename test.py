@@ -221,6 +221,8 @@ else:
     print('no')
 """
 #check for amstrong Number.
+
+"""
 num = int(input("No : "))   
 temp = num
 sum = 0
@@ -235,4 +237,4 @@ if num == sum:
 else:
     print("NO")
         
-
+"""
