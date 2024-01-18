@@ -238,3 +238,62 @@ else:
     print("NO")
         
 """
+
+"""
+class CropRatio:
+    def __init__(self):
+        self.crop_counts = {}
+
+    def add(self, crop, count):
+        if crop in self.crop_counts:
+            self.crop_counts[crop] += count
+        else:
+            self.crop_counts[crop] = count
+
+    def proportion(self, crop):
+        total_count = sum(self.crop_counts.values())
+        
+        if total_count == 0 or crop not in self.crop_counts:
+            return 0
+        
+        return self.crop_counts[crop] / total_count
+
+# Example usage:
+crop_ratio = CropRatio()
+
+crop_ratio.add("Wheat", 4)
+crop_ratio.add("Wheat", 5)
+crop_ratio.add("Rice", 1)
+
+print(crop_ratio.proportion("Wheat"))  # Output should be 0.9
+print(crop_ratio.proportion("Rice"))   # Output should be 0.1
+print(crop_ratio.proportion("Corn"))   # Output should be 0
+"""
+
+def common_prefix(strings):
+    if not strings:
+        return "[]"
+
+    # Take the first string as the initial prefix
+    prefix = strings[0]
+
+    for string in strings[1:]:
+        # Iterate through characters in both strings
+        for i in range(min(len(prefix), len(string))):
+            # If characters don't match, update prefix and break the loop
+            if prefix[i] != string[i]:
+                prefix = prefix[:i]
+                break
+        else:
+            # If the loop completes without a break, update prefix to the shorter string
+            prefix = prefix[:len(string)]
+
+    return prefix
+
+inp_list = ["praveen", "prateek", "prakash", "preet"]
+output = common_prefix(inp_list)
+print(output)  # Output: 'pr'
+
+second_inp_list = ["praveen", "prateek", "prakash", "preet", "rahul"]
+output_second = common_prefix(second_inp_list)
+print(output_second)  # Output: 'pr'

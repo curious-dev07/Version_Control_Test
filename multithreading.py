@@ -45,7 +45,7 @@ def remove_empty_list(lst):
 li = [100, 'ajay', [], ['amit', [], [], 'athrva'], [[], 'omkar', 123, 11], [44, 'sakeeb'], []]
 print(remove_empty_list(li))
 """
-
+"""
 total = 0
 def sum_all(lst):
     for ele in lst:
@@ -58,3 +58,29 @@ def sum_all(lst):
     return total
 
 print(sum_all([10, 20, [30, 40], 50,[60, 70, 80, 90, [100, 110, 120, 130, 140], 150], 160]))
+"""
+"""
+str = "G  Gle"
+
+def replace_space(str):
+    new_str = ""
+    for char in str:
+        if char == " ":
+            new_str = new_str + "o"
+            
+        else:
+            new_str = new_str + char
+            
+    return new_str.upper()
+
+print(replace_space(str))
+"""
+"""
+str = "Sugar is bad for health"
+
+def reverse_sentence(str):
+    str = str.upper()
+    return " ".join(str.split(" ")[::-1])
+
+print(reverse_sentence(str))
+"""
