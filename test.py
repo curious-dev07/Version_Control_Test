@@ -269,7 +269,7 @@ print(crop_ratio.proportion("Wheat"))  # Output should be 0.9
 print(crop_ratio.proportion("Rice"))   # Output should be 0.1
 print(crop_ratio.proportion("Corn"))   # Output should be 0
 """
-
+"""
 def common_prefix(strings):
     if not strings:
         return "[]"
@@ -297,3 +297,7 @@ print(output)  # Output: 'pr'
 second_inp_list = ["praveen", "prateek", "prakash", "preet", "rahul"]
 output_second = common_prefix(second_inp_list)
 print(output_second)  # Output: 'pr'
+"""
+import multiprocessing
+
+print("Number of cpu : ", multiprocessing.cpu_count())
